@@ -1,0 +1,232 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+    --space-black: #05070a;
+    --star-blue: #00d2ff;
+    --nebula-purple: #9d50bb;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+    color: #ffffff;
+    font-family:'Poppins',sans-serif;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,.navbar-brand{
+font-family:'Orbitron',sans-serif;
+}
+
+.navbar {
+    background: rgba(5, 7, 10, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar .nav-link{
+    color: white !important
+}
+
+.navbar .nav-link:hover{
+    color:#0dcaf0;
+}
+
+.navbar .nav-link.active{
+    color:#0dcaf0;
+    font-weight:bold;
+    border-bottom:2px solid #0dcaf0;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--star-blue) !important;
+    text-shadow: 0 0 10px var(--star-blue);
+}
+
+.container h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--star-blue);
+    text-shadow: 0 0 10px var(--star-blue);
+}
+
+.container p{
+    font-size: 1.1rem;
+}
+
+.carousel-item img{
+height:70vh;
+min-height:400px;
+object-fit:cover;
+filter:brightness(60%);
+}
+
+.carousel-caption {
+    bottom: 30%;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+.glass-section{
+background: var(--glass-bg);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border:1px solid var(--glass-border);
+border-radius:15px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+}
+
+.glass-section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.glass-section img:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.video-section{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+video{
+    width:80%;
+    max-width:900px;
+    border-radius:15px;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.6);
+}
+
+.video-fit{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    color: #fff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--star-blue), var(--nebula-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.btn{
+transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #3a7bd5, #00d2ff);
+    transform: scale(1.05);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--star-blue);
+    color: var(--star-blue);
+    border-radius: 50px;
+}
+
+.btn-outline-primary:hover {
+    background: var(--star-blue);
+    color: #000;
+}
+
+.floating-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+#news-ticker{
+color: var(--star-blue);
+text-shadow: 0 0 5px var(--star-blue);
+transition: opacity 0.5s ease-in-out;
+}
+
+footer {
+    background: #05070a;
+    border-top: 1px solid var(--glass-border);
+    margin-top: 50px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--star-blue) !important;
+    transform: scale(1.2);
+    display: inline-block;
+}
+@media (min-width:992px){
+    .display-3 { font-size: 2.5rem; }
+    .carousel-item img { height: 60vh; }
+    .navbar-collapse{
+    display:flex;
+    justify-content:center;
+}
+}
+
+.timeline{
+position:relative;
+padding:40px 0;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+width:3px;
+height:100%;
+background:#0dcaf0;
+}
